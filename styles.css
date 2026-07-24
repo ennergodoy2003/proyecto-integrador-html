@@ -1,0 +1,115 @@
+/* ===========================
+   Variables CSS
+   Se definen una sola vez y se reutilizan en todo el archivo.
+=========================== */
+
+:root{
+    --color-primario: #2d8bf0;
+    --color-fondo: #f4f6f9;
+    --color-texto: #333333;
+    --color-blanco: #ffffff;
+    --color-texto-menu: #ffffff;
+    --spacing-md: 20px;
+}
+
+/* Se utiliza border-box para que el ancho y alto
+   incluyan el padding y el borde del elemento,
+   facilitando el diseño de la página. */
+
+* {
+    box-sizing: border-box;
+} 
+
+body {
+
+    display: grid;
+
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    background-color: var(--color-fondo);
+    
+
+}
+
+
+header {
+
+    grid-area: header;
+
+     background-color: var(--color-primario);
+
+    color: var(--color-blanco);
+
+    padding: var(--spacing-md);
+
+}
+
+
+main {
+
+    grid-area: main;
+
+}
+
+
+footer {
+
+    grid-area: footer;
+
+    background-color: var(--color-primario);
+
+    color: var(--color-blanco);
+
+    padding: var(--spacing-md);
+
+    text-align: center;
+
+}
+
+#servicios {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: var(--spacing-md);
+
+}
+
+
+article {
+
+    background-color: var(--color-blanco);
+
+    padding: var(--spacing-md);
+
+    flex: 1 1 250px;
+
+}
+
+@media (min-width: 768px){
+
+    nav ul{
+
+        display: flex;
+
+        justify-content: center;
+
+        gap: var(--spacing-md);
+
+    }
+
+}
+ 
+
+nav a{
+
+    color: var(--color-texto-menu);
+    text-decoration: none;
+    font-weight: bold;
+
+
+
+}
